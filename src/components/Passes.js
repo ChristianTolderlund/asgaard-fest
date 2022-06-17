@@ -11,7 +11,7 @@ export default function Passes({
   const [toggleHidden, setToggleHidden] = useState(false);
 
   return (
-    <article className="w-full h-auto bg-concert-pink text-black pb-[3vw]">
+    <article id="0" className="scroll-mt-[13rem] w-full h-auto bg-concert-pink text-black pb-[3vw]">
       <h1 className="font-acier p-5 text-6xl text-black">FESTIVAL PASSES</h1>
       <ul className="space-y-6 px-[5vw] max-w-[1200px]">
         <PassesLines

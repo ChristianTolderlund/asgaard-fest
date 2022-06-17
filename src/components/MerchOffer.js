@@ -2,7 +2,7 @@ import ShirtBox from "./ShirtBox";
 
 export default function MerchOffer() {
   return (
-    <article className="flex flex-col w-full h-auto bg-concert-redish text-black ">
+    <article id="2" className=" scroll-mt-[13rem] flex flex-col w-full h-auto bg-concert-redish text-black ">
       <div className="flex flex-col mb-8">
         <span className="font-acier p-8 text-6xl">MERCH</span>
         <div className="flex flex-col h-auto items-center p-4 gap-4 md:grid grid-rows-2 grid-cols-3">

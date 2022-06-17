@@ -5,7 +5,7 @@ import { SeeDetailButton, SeeDetailButtonUp, Button2 } from "../components/Butto
 // import useFetch from "../hooks/useFetch";
 import Passes from "../components/Passes";
 import useCountdown from "../hooks/useCountdown";
-import { useState } from "react";
+import React, { useState, Compent, useRef } from "react";
 import { motion } from "framer-motion";
 
 // const targetDate = this;
@@ -17,25 +17,9 @@ export default function Shop({ userCart, setUserCart, countdown, setCountdown })
   const [days, hours, minutes, seconds] = useCountdown(targetDate);
   // const { loading, error, data } = useFetch("https://the-javascript-bar-project.herokuapp.com/available-spots");
 
-  function handleClick(value) {
-    setDay(value);
-    // if (value == 1) {
-    //   console.log("this is working");
-    //   const Passes = document.getElementById("1");
-    //   console.log(Passes);
-    //   // Passes.scrollIntoView();
-    // }
-    // if (value == 0) {
-    //   console.log("this ");
-    // }
-    // if (value == 2) {
-    //   console.log("this now ");
-    // }
-  }
-
   return (
     <Content>
-      <div className="font-acier text-center pt-20 pb-10">
+      <div className="font-acier text-center pt-20 pb-10 scroll-smooth">
         <p className="text-4xl font-aciersolid">
           {days} Days {hours}h {minutes}' {seconds}"
         </p>
@@ -43,40 +27,43 @@ export default function Shop({ userCart, setUserCart, countdown, setCountdown })
         <p className="text-2xl ">HUSTON WE GOT THE TICKETS</p>
       </div>
       <div className="w-full sticky top-[6rem] z-10 bg-black ">
-        <div className="flex flex-row justify-between  ">
-          <button
-            className={`flex basis-1/3 m-[0.5rem] ml-0 p-[0.5rem] text-[0.75rem]  justify-center  md:p-[1.25rem] md:text-[2rem] font-acier text-semibold hover:font-aciersolid text-black w-auto ${
+        <div className="flex flex-row justify-between">
+          <a href="#0" className={`flex basis-1/3 m-[0.5rem] ml-0 p-[0.5rem] text-[0.75rem]  justify-center md:text-[1.5rem] font-acier text-semibold hover:font-aciersolid text-black w-auto ${
               field === 0 ? `bg-black text-concert-pink font-aciersolid border-[2px] border-concert-pink ` : `bg-concert-pink text-black `
             } `}
             value={0}
-            onClick={(event) => handleClick(event.target.value)}
-          >
+            onClick ={() => setDay(0)}
+            >
+          <button>
             Festival Passes
           </button>
-          <button
-            className={`flex basis-1/3 m-[0.5rem] p-[0.5rem] text-[0.75rem]    justify-center md:p-[1.25rem] md:text-[2rem] font-acier text-semibold hover:font-aciersolid  text-black w-auto ${
+          </a>
+          <a href="#1" className={`flex basis-1/3 m-[0.5rem] p-[0.5rem] text-[0.75rem]    justify-center md:text-[1.5rem] font-acier text-semibold hover:font-aciersolid  text-black w-auto ${
               field === 1 ? `bg-black text-concert-yellow font-aciersolid border-[2px] border-concert-yellow ` : `bg-concert-yellow text-black `
             } `}
-            value={1}
-            onClick={(event) => handleClick(event.target.value)}
-          >
+            value={1} 
+            onClick ={() => setDay(1)}
+            >
+          <button>
             Camping Accomodaion
           </button>
-          <button
-            className={`flex basis-1/3 m-[0.5rem] mr-0 p-[0.5rem] text-[0.75rem]   justify-center md:p-[1.25rem] md:text-[2rem] font-acier text-semibold hover:font-aciersolid  text-black w-auto ${
+          </a>
+          <a href="#2" className={`flex basis-1/3 m-[0.5rem] mr-0 p-[0.5rem] text-[0.75rem]   justify-center md:text-[1.5rem] font-acier text-semibold hover:font-aciersolid  text-black w-auto ${
               field === 2 ? `bg-black text-concert-redish font-aciersolid border-[2px] border-concert-redish ` : `bg-concert-redish text-black `
             } `}
             value={2}
-            onClick={(event) => handleClick(event.target.value)}
-          >
+            onClick ={() => setDay(2)}
+            >
+          <button>
             Merch
           </button>
+          </a>
         </div>
       </div>
 
       <Passes userCart={userCart} setUserCart={setUserCart} countdown={countdown} setCountdown={setCountdown} id="0" />
-      <CampContainer userCart={userCart} setUserCart={setUserCart} id="1" />
-      <MerchOffer id="2" />
+      <CampContainer userCart={userCart} setUserCart={setUserCart}/>
+      <MerchOffer/>
     </Content>
   );
 }
@@ -84,7 +71,7 @@ export default function Shop({ userCart, setUserCart, countdown, setCountdown })
 export function CampContainer({ userCart, setUserCart }) {
   return (
     <div className={`w-full bg-concert-yellow text-black pb-[3vw]`}>
-      <h1 className="text-3xl phone:text-5xl font-acier p-5">CAMPING ACCOMODATION</h1>
+      <h1 className="text-3xl phone:text-5xl font-acier p-5 scroll-mt-[13rem]" id="1">CAMPING ACCOMODATION</h1>
       <ul className="space-y-6 px-[5vw] max-w-[1200px]">
         <CampingLines
           userCart={userCart}
