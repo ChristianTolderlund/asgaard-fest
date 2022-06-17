@@ -27,7 +27,7 @@ export default function Shop({ userCart, setUserCart, countdown, setCountdown })
         <p className="text-2xl ">HUSTON WE GOT THE TICKETS</p>
       </div>
       <div className="w-full sticky top-[6rem] z-10 bg-black ">
-        <div className="flex flex-row justify-between">
+        <div className="flex flex-row justify-between pt-11 pb-2">
           <a href="#0" className={`flex basis-1/3 m-[0.5rem] ml-0 p-[0.5rem] text-[0.75rem]  justify-center md:text-[1.5rem] font-acier text-semibold hover:font-aciersolid text-black w-auto ${
               field === 0 ? `bg-black text-concert-pink font-aciersolid border-[2px] border-concert-pink ` : `bg-concert-pink text-black `
             } `}
