@@ -128,12 +128,12 @@ export default function Lineup({ bands }) {
         </div>
 
         <div>
-          <h2 className="text-7xl text-black mb-8 sm:text-7xl  font-acier bg-concert-pink flex justify-center py-6 px-6   xl:text-[114px] xl:h-[10rem] mt-[5rem] ">Midgard</h2>
+          <h2 className="text-7xl text-black mb-8 sm:text-7xl  font-acier bg-concert-pink flex justify-center py-4 pb-2 px-6   xl:text-[114px] xl:h-[10rem] mt-[5rem] ">Midgard</h2>
 
-          <ul className="w-full grid gap-4 grid-cols-2 grid-rows-2 md:grid-cols-3 md:grid-rows-3 lg:grid-cols-3 lg:grid-rows-3 xl:grid-cols-4 xl:grid-rows-4 ">
+          <ul className="w-full grid gap-4 grid-cols-2 grid-rows-2 md:grid-cols-3 md:grid-rows-3 lg:grid-cols-3 lg:grid-rows-3 xl:grid-cols-4 xl:grid-rows-4">
             {data &&
               DisplayMidgard.map((band, index) => (
-                <div key={`band#${index}`} className="bg-gray-600 text-white ">
+                <div key={`band#${index}`} className="bg-gray-600 text-white hover:opacity-80">
                   <CheckingBands bgColor="concert-pink" band={band} />
                 </div>
               ))}
@@ -141,12 +141,12 @@ export default function Lineup({ bands }) {
         </div>
 
         <div>
-          <h2 className="text-7xl text-black mb-8 sm:text-7xl  font-acier bg-concert-b-green flex justify-center py-6 px-6   xl:text-[114px] xl:h-[10rem] mt-[5rem] ">Vanaheim</h2>
+          <h2 className="text-7xl text-black mb-8 sm:text-7xl  font-acier bg-concert-b-green flex justify-center py-4 pb-2 px-6   xl:text-[114px] xl:h-[10rem] mt-[5rem] ">Vanaheim</h2>
 
           <ul className="w-full grid gap-4 grid-cols-2 grid-rows-2 md:grid-cols-3 md:grid-rows-3 lg:grid-cols-3 lg:grid-rows-3 xl:grid-cols-4 xl:grid-rows-4 ">
             {data &&
               DisplayVanaheim.map((band, index) => (
-                <div key={`band#${index}`} className="bg-gray-600 text-white ">
+                <div key={`band#${index}`} className="bg-gray-600 text-white hover:opacity-80">
                   <CheckingBands bgColor="concert-b-green" band={band} />
                 </div>
               ))}
@@ -154,12 +154,12 @@ export default function Lineup({ bands }) {
         </div>
 
         <div>
-          <h2 className="text-7xl text-black mb-8 sm:text-7xl  font-acier bg-concert-blue flex  justify-center py-6 px-6   xl:text-[114px] xl:h-[10rem]  mt-[5rem]">Jotunheim</h2>
+          <h2 className="text-7xl text-black mb-8 sm:text-7xl  font-acier bg-concert-blue flex  justify-center py-4 pb-2 px-6   xl:text-[114px] xl:h-[10rem]  mt-[5rem]">Jotunheim</h2>
 
           <ul className="w-full grid gap-4 grid-cols-2 grid-rows-2 md:grid-cols-3 md:grid-rows-3 lg:grid-cols-3 lg:grid-rows-3 xl:grid-cols-4 xl:grid-rows-4 ">
             {data &&
               DisplayJotunheim.map((band, index) => (
-                <div key={`band#${index}`} className="bg-gray-600 text-white ">
+                <div key={`band#${index}`} className="bg-gray-600 text-white hover:opacity-80">
                   <CheckingBands bgColor="concert-blue" band={band} />
                 </div>
               ))}

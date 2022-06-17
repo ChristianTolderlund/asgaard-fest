@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export default function Stages({ bgColor, stagesBG, stageName }) {
   return (
-    <div className="w-full items-center">
+    <div className="w-full items-center hover:opacity-90">
       <Link to={"/lineup"}>
         <img
           className="row-span-3 w-full "

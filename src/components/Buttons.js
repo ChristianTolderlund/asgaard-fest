@@ -28,7 +28,7 @@ Button2.defaultProps = {
 export function Button3({ label, buttonThreeBg }) {
   return (
     <div
-      className={`text-[0.6rem] text-black bg-${buttonThreeBg} whitespace-pre font-montserrat px-4 py-1 w-fit font-bold border-[3px] border-black text-sm sm:text-sm`}
+      className={`text-[0.6rem] text-black bg-${buttonThreeBg} whitespace-pre font-montserrat px-4 py-1 w-fit font-bold border-[3px] border-black text-sm sm:text-sm hover:bg-black hover:text-white`}
     >
       {label}
     </div>
@@ -43,7 +43,7 @@ Button3.defaultProps = {
 export function SeeDetailButton({ label, bgcolor }) {
   return (
     <div
-      className={`pr-2 whitespace-pre sm:text-black font-montserrat w-fit h-fit font-bold border-[2px] border-black text-xs bg-${bgcolor} `}
+      className={`pr-2 whitespace-pre sm:text-black font-montserrat w-fit h-fit font-bold border-[2px] border-black text-xs bg-${bgcolor} hover:bg-black hover:text-concert-yellow`}
     >
       <ul className="flex items-center space-x-1">
         <li>

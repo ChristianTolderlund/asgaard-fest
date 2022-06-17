@@ -136,7 +136,7 @@ export default function PassesLines({
             ) : (
               <label className="flex items-center h-8 px-1 bg-concert-yellow border-black border-[2px] selectQuantity">
                 <AiOutlineMinusCircle
-                  className="text-xl cursor-pointer"
+                  className="text-xl cursor-pointer hover:opacity-25"
                   onClick={() =>
                     itemQuantity > 1 && setItemQuantity(itemQuantity - 1)
                   }
@@ -152,7 +152,7 @@ export default function PassesLines({
                   className="bg-concert-yellow text-center p-0 font-bold w-10 border-none"
                 />
                 <AiOutlinePlusCircle
-                  className="text-xl cursor-pointer"
+                  className="text-xl cursor-pointer hover:opacity-25"
                   onClick={() =>
                     itemQuantity >= 1 && setItemQuantity(itemQuantity + 1)
                   }
@@ -168,7 +168,7 @@ export default function PassesLines({
                 ADD TO CHART
               </button>
             ) : (
-              <button className=" bg-black h-8 font-bold p-1 flex items-center text-white text-xs">
+              <button className=" bg-black h-8 font-bold p-1 flex items-center text-white text-xs hover:text-concert-yellow">
                 ADD TO CHART
               </button>
             )}

@@ -16,7 +16,7 @@ export default function GetHere() {
         </p>
         <div className="text-sm pt-4">
           <Link to="/shop">
-            <Button3 label="SEE ALL CAMPS" buttonThreeBg="concert-redish" />
+            <Button3 label="SEE ALL CAMPS" buttonThreeBg="concert-redish"/>
           </Link>
         </div>
       </div>
