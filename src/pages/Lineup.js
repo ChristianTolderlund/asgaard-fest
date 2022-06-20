@@ -118,7 +118,7 @@ export default function Lineup({ bands }) {
             <div className="flex justify-center sm:items-center">
               <div class="form-floating m-[0.25rem] w-[17.8rem] sm:w-auto xl:w-96">
                 <input
-                  type="password"
+                  type="text"
                   className="form-control block w-full text-base font-normal font-montserrat bg-concert-yellow bg-clip-padding border border-solid border-black border-[3px]  transition ease-in-out m-0 focus:text-black  placeholder-black  text-font-semibold placeholder-blackfocus:bg-concert-yellow  focus:border-concert-pink focus:outline-none "
                   placeholder="SEARCH BY BAND NAME"
                 ></input>

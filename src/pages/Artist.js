@@ -23,6 +23,7 @@ export default function Artist({ bands, schedule }) {
   let DisplayVanaheim = [];
   let DisplayJotunheim = [];
 
+  
   // const [currentStage, setCurrentStage] = useState();
 
   let DisplayMidgardSliced = [];
@@ -125,7 +126,9 @@ export default function Artist({ bands, schedule }) {
 
   DisplayMidgardSliced = DisplayMidgard.slice(0, 8);
   // console.log(DisplayMidgardSliced);
-
+  const scrollToTop = () => {
+    window.scrollTo(0, 0)
+}
   return (
     <Content>
       <div className="flex justify-center items-center pt-[4rem] ">
@@ -141,9 +144,9 @@ export default function Artist({ bands, schedule }) {
             </div>
             <div className="flex justify-center ">
               <div className="flex flex-row w-[11rem] items-center justify-between mt-[1rem] ">
-                <BsInstagram size={32} className=" 2xl:mr-2 text-concert-pink size={40}" />
-                <BsSpotify size={32} className="  2xl:mr-2  text-concert-pink" />
-                <ImSoundcloud size={48} className="  2xl:mr-2 text-concert-pink" />
+                <a href="https://www.instagram.com/" target="_blank" rel="noreferrer"><BsInstagram size={32} className=" 2xl:mr-2 text-concert-pink size={40} hover:opacity-50" /></a>
+                <a href="https://www.Spotify.com/" target="_blank" rel="noreferrer"><BsSpotify size={32} className="  2xl:mr-2  text-concert-pink hover:opacity-50" /></a>
+                <a href="https://www.soundcloud.com/" target="_blank" rel="noreferrer"><ImSoundcloud size={48} className="  2xl:mr-2 text-concert-pink hover:opacity-50" /></a>
               </div>
             </div>
             <div className=" mt-[1rem] text-xl text-center font-acier text-concert-pink md:text-2xl xl:text-5xl p-2">Midgard</div>
@@ -152,6 +155,9 @@ export default function Artist({ bands, schedule }) {
             <div className="h-[17rem] lg:h-[30rem] border-[2px] border-b-[0px] border-t-[0px] border-concert-yellow ">
               <CheckingBands bgColor="concert-blue" band={data && thisBand} />
             </div>
+            {data && thisBand.logoCredits && (
+            <div className="flex justify-center content-center text-center h-auto border-[2px] border-b-[0px] border-t-[2px] border-concert-yellow px-8 py-6 italic text-[0.5rem] sm:text-[0.9rem] ">Image Taken {thisBand.logoCredits}</div>
+            )}
           </div>
           <div className="border-[2px] border-b-[0px] border-concert-yellow flex items-center justify-center p-8">
             <div className="w-[90%] md:w-[80%] lg:w-[70%] hover:concert-yellowish hover:bg-concert-yellow  bg-concert-pink text-center h-20 flex items-center justify-center xl:text-4xl font-aciersolid text-black">SPOTIFY</div>
@@ -166,10 +172,10 @@ export default function Artist({ bands, schedule }) {
       <div>
         <div>
           <h3 className="text-7xl text-black mb-8 sm:text-7xl  font-acier bg-concert-pink flex justify-center py-6 px-6 lg:py-16  xl:text-[114px] xl:py-10 ">Midgard</h3>
-          <ul className="w-full grid gap-4 grid-cols-2 grid-rows-2 md:grid-cols-3 md:grid-rows-3 lg:grid-cols-3 lg:grid-rows-3 xl:grid-cols-4 xl:grid-rows-2 ">
+          <ul onClick={scrollToTop} className="w-full grid gap-4 grid-cols-2 grid-rows-2 md:grid-cols-3 md:grid-rows-3 lg:grid-cols-3 lg:grid-rows-3 xl:grid-cols-4 xl:grid-rows-2">
             {data &&
               DisplayMidgardSliced.map((band, index) => (
-                <div key={`band#${index}`} className="bg-gray-600 text-white ">
+                <div key={`band#${index}`} className="bg-gray-600 text-white hover:opacity-50">
                   <CheckingBandsSuggestons bgColor="concert-pink" band={band} />
                 </div>
               ))}
