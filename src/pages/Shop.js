@@ -5,7 +5,7 @@ import { SeeDetailButton, SeeDetailButtonUp, Button2 } from "../components/Butto
 // import useFetch from "../hooks/useFetch";
 import Passes from "../components/Passes";
 import useCountdown from "../hooks/useCountdown";
-import React, { useState, Compent, useRef } from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 
 // const targetDate = this;
